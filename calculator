@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="button-container">
+            <button id="clear">C</button>
+            <button id="backspace">←</button>
+            <button id="divide">/</button>
+            <button id="multiply">*</button>
+            <button id="subtract">-</button>
+            <button id="add">+</button>
+            <button id="equals">=</button>
+            <button id="0">0</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+.calculator {
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    text-align: right;
+}
+
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('button');
+
+let currentNumber = '';
+let previousNumber = '';
+let operator = '';
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // TO DO: implement button click logic
+    });
+});
